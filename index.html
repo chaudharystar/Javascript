@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURD OPERATIONS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="readAllData()">
+    <div id="container">
+        <h1>CURD OPERATIONS</h1>
+        <form class="update-container">
+            <input type="text" hidden class="id">
+            <input class="uname input" type="text" name="name-input" placeholder="Enter Name">
+            <input class="uemail input" type="email" name="email-input" placeholder="Enter Email">
+            <button type="button" class="add-btn btn" onclick="update()">Save</button>
+            <button type="button" class="del-btn btn" onclick="cancel()">Cancel</button>
+        </form>
+        <form class="input-container">
+            <input class="name input" type="text" name="name-input" placeholder="Enter Name">
+            <input class="email input" type="email" name="email-input" placeholder="Enter Email">
+            <button type="button" class="add-btn btn" onclick="addRow()">Add</button>
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+            <tbody class="table-body"></tbody>
+        </table>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
